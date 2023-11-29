@@ -8,7 +8,6 @@ import {
 import { Button, Divider, MenuProps, Space, Typography } from 'antd';
 import { Logout } from 'api/utils';
 import ROUTES from 'constants/routes';
-import Config from 'container/ConfigDropdown';
 import { useIsDarkMode, useThemeMode } from 'hooks/useDarkMode';
 import useLicense, { LICENSE_PLAN_STATUS } from 'hooks/useLicense';
 import history from 'lib/history';

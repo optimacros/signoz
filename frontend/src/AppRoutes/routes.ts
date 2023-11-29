@@ -191,13 +191,6 @@ const routes: AppRoutes[] = [
 		key: 'ALL_ERROR',
 	},
 	{
-		path: ROUTES.LIST_LICENSES,
-		exact: true,
-		component: LicensePage,
-		isPrivate: true,
-		key: 'LIST_LICENSES',
-	},
-	{
 		path: ROUTES.ERROR_DETAIL,
 		exact: true,
 		component: ErrorDetails,
