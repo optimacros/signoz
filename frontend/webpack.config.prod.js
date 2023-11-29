@@ -161,7 +161,7 @@ const config = {
 		innerGraph: true, // tells webpack whether to conduct inner graph analysis for unused exports.
 		mangleWasmImports: true,
 		mergeDuplicateChunks: true,
-		minimize: true,
+		minimize: false,
 		nodeEnv: 'production',
 		runtimeChunk: {
 			name: (entrypoint) => `runtime~${entrypoint.name}`,
