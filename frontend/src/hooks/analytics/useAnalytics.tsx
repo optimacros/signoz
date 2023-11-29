@@ -8,9 +8,7 @@ const useAnalytics = (): any => {
 
 	const trackPageView = (pageName: string): void => {
 		if (user && user.email) {
-            console.log(pageName);
-            console.log(window.analytics);
-			window.analytics.page(pageName);
+			// window.analytics.page(pageName);
 		}
 	};
 
@@ -24,7 +22,7 @@ const useAnalytics = (): any => {
 					groupId: extractDomain(user?.email),
 				},
 			};
-			window.analytics.track(eventName, properties, context);
+			// window.analytics.track(eventName, properties, context);
 		}
 	};
 

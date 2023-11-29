@@ -118,11 +118,11 @@ function App(): JSX.Element {
 			source: 'signoz-ui',
 		};
 
-		window.analytics.identify(email, sanitizedIdentifyPayload);
+		// window.analytics.identify(email, sanitizedIdentifyPayload);
 
-		window.analytics.group(domain, groupTraits);
+		// window.analytics.group(domain, groupTraits);
 
-		window.clarity('identify', email, name);
+		// window.clarity('identify', email, name);
 	};
 
 	useEffect(() => {
