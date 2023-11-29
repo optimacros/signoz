@@ -64,7 +64,7 @@ const config = {
 	target: 'web',
 	output: {
 		path: resolve(__dirname, './build'),
-		publicPath: '/',
+		publicPath: '/profiler/',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx'],
