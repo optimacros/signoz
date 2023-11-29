@@ -153,39 +153,12 @@ const config = {
 		],
 	},
 	plugins,
-	optimization: {
-		chunkIds: 'named',
-		concatenateModules: false,
-		emitOnErrors: true,
-		flagIncludedChunks: true,
-		innerGraph: true, // tells webpack whether to conduct inner graph analysis for unused exports.
-		mangleWasmImports: true,
-		mergeDuplicateChunks: true,
-		minimize: false,
-		nodeEnv: 'production',
-		runtimeChunk: {
-			name: (entrypoint) => `runtime~${entrypoint.name}`,
-		},
-		minimizer: [
-			new TerserPlugin({
-				parallel: true,
-				terserOptions: {
-					compress: true,
-					keep_classnames: true,
-					keep_fnames: false,
-					sourceMap: false,
-					safari10: true,
-					parse: {
-						html5_comments: false,
-					},
-				},
-			}),
-			new CssMinimizerPlugin(),
-		],
-	},
-	performance: {
-		hints: 'warning',
-	},
+    performance: {
+        hints: false,
+    },
+    optimization: {
+        minimize: false,
+    },
 };
 
 module.exports = config;
