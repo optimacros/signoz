@@ -48,7 +48,7 @@ const plugins = [
 	new Critters({
 		preload: 'swap',
 		// Base path location of the CSS files
-		path: resolve(__dirname, './build/css'),
+		path: resolve(__dirname, './build/profiler/css'),
 		// Public path of the CSS resources. This prefix is removed from the href
 		publicPath: resolve(__dirname, './public/css'),
 		fonts: true,
@@ -63,7 +63,7 @@ const config = {
 	mode: 'production',
 	entry: resolve(__dirname, './src/index.tsx'),
 	output: {
-		path: resolve(__dirname, './build'),
+		path: resolve(__dirname, './build/profiler'),
 		publicPath: '/profiler/',
 		filename: '[name].[contenthash].js',
 	},
