@@ -44,7 +44,7 @@ const plugins = [
 			CLARITY_PROJECT_ID: process.env.CLARITY_PROJECT_ID,
 		}),
 	}),
-	new MiniCssExtractPlugin(),
+	//new MiniCssExtractPlugin(),
 	new Critters({
 		preload: 'swap',
 		// Base path location of the CSS files
