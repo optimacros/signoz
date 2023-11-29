@@ -28,7 +28,6 @@ import AppReducer from 'types/reducer/app';
 import { getFormattedDate, getRemainingDays } from 'utils/timeUtils';
 
 import CurrentOrganization from './CurrentOrganization';
-import ManageLicense from './ManageLicense';
 import SignedIn from './SignedIn';
 import {
 	AvatarWrapper,
@@ -75,8 +74,6 @@ function HeaderContainer(): JSX.Element {
 							<SignedIn onToggle={onToggleHandler(setIsUserDropDownOpen)} />
 							<Divider />
 							<CurrentOrganization onToggle={onToggleHandler(setIsUserDropDownOpen)} />
-							<Divider />
-							<ManageLicense onToggle={onToggleHandler(setIsUserDropDownOpen)} />
 							<Divider />
 							<LogoutContainer>
 								<LogoutOutlined />
@@ -168,13 +165,6 @@ function HeaderContainer(): JSX.Element {
 					</NavLink>
 
 					<Space size="middle" align="center">
-						{licenseStatus === 'success' && !isLicenseActive && (
-							<Button onClick={onClickSignozCloud} type="primary">
-								Try Signoz Cloud
-							</Button>
-						)}
-						<Config frontendId="tooltip" />
-
 						<ToggleButton
 							checked={isDarkMode}
 							onChange={toggleTheme}
