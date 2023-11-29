@@ -159,13 +159,7 @@ function SideNav(): JSX.Element {
 					</MenuLabelContainer>
 				),
 				onClick: onClickVersionHandler,
-			},
-			{
-				key: SecondaryMenuItemKey.Slack,
-				icon: <Slack />,
-				label: <StyledText>Support</StyledText>,
-				onClick: onClickSlackHandler,
-			},
+			}
 		];
 	}
 
