@@ -157,7 +157,7 @@ function HeaderContainer(): JSX.Element {
 				<Container>
 					<NavLink to={homeRoute}>
 						<NavLinkWrapper>
-							<img src={`/signoz.svg?currentVersion=${currentVersion}`} alt="SigNoz" />
+							<img src={`/profiler/signoz.svg?currentVersion=${currentVersion}`} alt="SigNoz" />
 							<Typography.Title
 								style={{ margin: 0, color: 'rgb(219, 219, 219)' }}
 								level={4}
