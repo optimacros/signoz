@@ -64,7 +64,7 @@ const config = {
 	entry: resolve(__dirname, './src/index.tsx'),
 	output: {
 		path: resolve(__dirname, './build'),
-		publicPath: '/profiler',
+		publicPath: '/profiler/',
 		filename: '[name].[contenthash].js',
 	},
 	resolve: {
