@@ -5,7 +5,6 @@ import { RouteProps } from 'react-router-dom';
 import {
 	AllAlertChannels,
 	AllErrors,
-	BillingPage,
 	CreateAlertChannelAlerts,
 	CreateNewAlerts,
 	DashboardPage,
@@ -14,7 +13,6 @@ import {
 	EditRulesPage,
 	ErrorDetails,
 	IngestionSettings,
-	LicensePage,
 	ListAllALertsPage,
 	LiveLogs,
 	Login,
@@ -279,13 +277,6 @@ const routes: AppRoutes[] = [
 		exact: true,
 		component: PipelinePage,
 		key: 'LOGS_PIPELINES',
-		isPrivate: true,
-	},
-	{
-		path: ROUTES.BILLING,
-		exact: true,
-		component: BillingPage,
-		key: 'BILLING',
 		isPrivate: true,
 	},
 	{

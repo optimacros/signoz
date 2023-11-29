@@ -75,11 +75,6 @@ const menuItems: SidebarMenu[] = [
 		icon: <LineChartOutlined />,
 	},
 	{
-		key: ROUTES.BILLING,
-		label: 'Billing',
-		icon: <FileDoneOutlined />,
-	},
-	{
 		key: ROUTES.SETTINGS,
 		label: 'Settings',
 		icon: <SettingOutlined />,
