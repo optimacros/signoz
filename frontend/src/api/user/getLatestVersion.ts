@@ -2,14 +2,13 @@ import { ErrorResponseHandler } from 'api/ErrorResponseHandler';
 import axios, { AxiosError } from 'axios';
 import { ErrorResponse, SuccessResponse } from 'types/api';
 import { PayloadProps } from 'types/api/user/getLatestVersion';
+import { getVersion } from 'constants/api';
 
 const getLatestVersion = async (): Promise<
 	SuccessResponse<PayloadProps> | ErrorResponse
 > => {
 	try {
-		const response = await axios.get(
-			`https://api.github.com/repos/signoz/signoz/releases/latest`,
-		);
+		const response = await axios.get(`/${getVersion}`);
 
 		return {
 			statusCode: 200,
