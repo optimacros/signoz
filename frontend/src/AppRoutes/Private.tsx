@@ -5,7 +5,6 @@ import { Logout } from 'api/utils';
 import Spinner from 'components/Spinner';
 import { LOCALSTORAGE } from 'constants/localStorage';
 import ROUTES from 'constants/routes';
-import useLicense from 'hooks/useLicense';
 import { useNotifications } from 'hooks/useNotifications';
 import history from 'lib/history';
 import { ReactChild, useEffect, useMemo } from 'react';
@@ -38,11 +37,6 @@ function PrivateRoute({ children }: PrivateRouteProps): JSX.Element {
 			),
 		[pathname],
 	);
-
-	const {
-		data: licensesData,
-		isFetching: isFetchingLicensesData,
-	} = useLicense();
 
 	const {
 		isUserFetching,
@@ -143,16 +137,6 @@ function PrivateRoute({ children }: PrivateRouteProps): JSX.Element {
 		}
 	};
 
-	useEffect(() => {
-		if (!isFetchingLicensesData) {
-			const shouldBlockWorkspace = licensesData?.payload?.workSpaceBlock;
-
-			if (shouldBlockWorkspace) {
-				navigateToWorkSpaceBlocked(currentRoute);
-			}
-		}
-	}, [isFetchingLicensesData]);
-
 	// eslint-disable-next-line sonarjs/cognitive-complexity
 	useEffect(() => {
 		(async (): Promise<void> => {
@@ -191,7 +175,7 @@ function PrivateRoute({ children }: PrivateRouteProps): JSX.Element {
 				history.push(ROUTES.SOMETHING_WENT_WRONG);
 			}
 		})();
-	}, [dispatch, isLoggedInState, currentRoute, licensesData]);
+	}, [dispatch, isLoggedInState, currentRoute]);
 
 	if (isUserFetchingError) {
 		return <Redirect to={ROUTES.SOMETHING_WENT_WRONG} />;

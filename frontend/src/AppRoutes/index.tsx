@@ -32,7 +32,6 @@ import defaultRoutes, { AppRoutes, SUPPORT_ROUTE } from './routes';
 
 function App(): JSX.Element {
 	const themeConfig = useThemeConfig();
-	const { data } = useLicense();
 	const [routes, setRoutes] = useState<AppRoutes[]>(defaultRoutes);
 	const { role, isLoggedIn: isLoggedInState, user, org } = useSelector<
 		AppState,
@@ -83,11 +82,7 @@ function App(): JSX.Element {
 		}
 	});
 
-	const isOnBasicPlan =
-		data?.payload?.licenses?.some(
-			(license) =>
-				license.isCurrent && license.planKey === LICENSE_PLAN_KEY.BASIC_PLAN,
-		) || data?.payload?.licenses === null;
+	const isOnBasicPlan = false;
 
 	const enableAnalytics = (user: User): void => {
 		const orgName =
